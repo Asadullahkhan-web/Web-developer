@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c6c3c3;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .section-header span {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #90da28;
+            color: #ffffff;
+            border-radius: 20%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            /* display: block; */
+            margin-bottom: 3px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+            display: inline;
+          
+        }
+        .form-group .checkbox-group {
+            display: flex; 
+            flex-direction: column;
+        
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #5cce64;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #1ab147;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: #1ab147;">Sign Up</h2>
+        <form action="#" method="post">
+            <div class="form-section">
+                <div class="section-header">
+                    <span>1</span>
+                    <h3>Your Basic Info</h3>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <label><input type="radio" name="age" value="under13"> Under 18</label>
+                    <label><input type="radio" name="age" value="over13" required> Over 18</label>
+                </div>
+            </div>
+            <div class="form-section">
+                <div class="section-header">
+                    <span>2</span>
+                    <h3>Your Profile</h3>
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold;" for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold;" for="job-role">Job Role:</label>
+                    <select id="job-role" name="job-role" required>
+                        <option value="frontend">Front-End Developer</option>
+                        <option value="backend">Back-End Developer</option>
+                        <option value="fullstack">Full-Stack Developer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: bold;">Interests:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="interests" value="development"> Development</label>
+                        <label><input type="checkbox" name="interests" value="design"> Design</label>
+                        <label><input type="checkbox" name="interests" value="Tasting"> Tasting</label>
+                        <label><input type="checkbox" name="interests" value="Development"> Development</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
